@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FizzBuzz</title>
+</head>
+<body>
+<h1>FizzBuzz</h1>
+<form>
+    <label for="limit">Enter your number:</label>
+    <input type="text" id="limit" name="limit">
+    <button type="submit">Get result!</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const limit = document.getElementById('limit').value;
+
+        fetch(`/fizzbuzz/${limit}`)
+            .then(response => response.json())
+            .then(data => {
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = data.result;
+            });
+    });
+</script>
+</body>
+</html>

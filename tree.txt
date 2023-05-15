@@ -1,0 +1,20 @@
+.
+├── Dockerfile
+├── cmd
+│   └── main.go
+├── docker-compose.yml
+├── go.mod
+├── go.sum
+├── internal
+│   ├── app
+│   │   ├── api.go
+│   │   └── app.go
+│   └── fizzBuzz
+│       ├── fizzBuzz.go
+│       └── fizzBuzz_test.go
+├── public
+│   └── index.html
+├── readme.md
+└── tree.txt
+
+6 directories, 12 files
